@@ -10,7 +10,7 @@ WORKDIR /home/usr/app/
 
 COPY . .
 
-RUN pip install --no-catch-dir -r /home/usr/app/requirements.txt 
+RUN pip install -r /home/usr/app/requirements.txt 
 
 CMD ["uvicorn", "controller.main:app", "--host", "0.0.0.0", "--port", "6098"]
 
